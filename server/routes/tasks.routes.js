@@ -1,17 +1,17 @@
-import { Router } from "express";
+import {Router} from "express";
 import {
   getTasks,
   getTask,
   createTask,
   deleteTask,
-  updateTask,
+  updateTask
 } from "../controllers/tasks.controller.js";
 
 const router = Router();
 
-router.get("/tasks", getTask);
+router.get("/tasks", getTasks);
 
-router.get("/tasks:id", getTasks);
+router.get("/tasks/:id", getTask);
 
 router.post("/tasks", createTask);
 
